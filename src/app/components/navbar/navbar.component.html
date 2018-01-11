@@ -1,0 +1,18 @@
+<nav class="navbar navbar-expand-lg navbar-light" style="background-color: #e3f2fd;">
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+    aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item test" *ngFor="let item of linksMenu; let i = index" appBolter>
+        <a class="navbar-brand" title="{{item.title}}" *ngIf="item.type === 'img'"
+          routerLink="/{{item.link}}">
+            <img src="{{item.src}}" alt="{{item.alt}}" title={{item.alt}}>
+        </a>
+        <a class="navbar-brand" title="item.title" *ngIf="!item.type"
+          routerLink="/{{item.link}}">{{item.title}}</a>
+      </li>
+    </ul>
+  </div>
+</nav>
