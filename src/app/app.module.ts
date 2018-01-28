@@ -10,6 +10,9 @@ import { NavbarComponent } from './components/navbar/navbar.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { ResumeComponent } from './components/resume/resume.component';
 import { ProjectsComponent } from './components/projects/projects.component';
+import { NetworkMainComponent } from './components/network-main/network-main.component';
+import { NetworkRegisterComponent } from './components/network-register/network-register.component';
+import { NetworkLoginComponent } from './components/network-login/network-login.component';
 import { ListGeneratorComponent } from './components/list-generator/list-generator.component';
 
 import { BolterDirective } from './directives/bolter.directive';
@@ -23,7 +26,10 @@ import { BolterDirective } from './directives/bolter.directive';
     ProjectsComponent,
     BolterDirective,
     ListGeneratorComponent,
-    HeaderComponent
+    HeaderComponent,
+    NetworkMainComponent,
+    NetworkRegisterComponent,
+    NetworkLoginComponent
   ],
   imports: [
     BrowserModule,
