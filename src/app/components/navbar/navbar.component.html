@@ -5,7 +5,7 @@
   </button>
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
-      <li class="nav-item test" *ngFor="let item of linksMenu; let i = index" appBolter>
+      <li class="nav-item col-auto" *ngFor="let item of linksMenu; let i = index" appBolter>
         <a class="navbar-brand" title="{{item.title}}" *ngIf="item.type === 'img'"
           routerLink="/{{item.link}}">
             <img src="{{item.src}}" alt="{{item.alt}}" title={{item.alt}}>
