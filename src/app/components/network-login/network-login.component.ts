@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { AuthService } from '../../services/auth.service';
 
 @Component({
   selector: 'app-network-login',
@@ -6,10 +7,10 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./network-login.component.sass']
 })
 export class NetworkLoginComponent implements OnInit {
-
-  constructor() { }
-
+  constructor(private authService: AuthService) { }
+  login(): void {
+    this.authService.login();
+  }
   ngOnInit() {
   }
-
 }

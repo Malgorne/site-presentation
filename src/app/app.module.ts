@@ -6,10 +6,11 @@ import { HttpClientModule } from '@angular/common/http';
 import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
 import { InMemoryDataService }  from './services/in-memory-data.service';
 
-
+// Root components
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 
+// App components
 import { HeaderComponent } from './components/header/header.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { FooterComponent } from './components/footer/footer.component';
@@ -20,7 +21,11 @@ import { NetworkRegisterComponent } from './components/network-register/network-
 import { NetworkLoginComponent } from './components/network-login/network-login.component';
 import { ListGeneratorComponent } from './components/list-generator/list-generator.component';
 
+// Directives
 import { BolterDirective } from './directives/bolter.directive';
+
+// Services
+import { AuthService } from './services/auth.service';
 
 @NgModule({
   declarations: [
@@ -44,7 +49,9 @@ import { BolterDirective } from './directives/bolter.directive';
       InMemoryDataService, { dataEncapsulation: false }
     )
   ],
-  providers: [],
+  providers: [
+    AuthService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

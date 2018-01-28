@@ -1,13 +1,22 @@
 import { Component, OnInit } from '@angular/core';
-// It will check if the is connected or has a cookie
+import { AuthService } from '../../services/auth.service';
+
 @Component({
   selector: 'app-network-main',
   templateUrl: './network-main.component.html',
   styleUrls: ['./network-main.component.sass']
 })
+
 export class NetworkMainComponent implements OnInit {
-  constructor() { }
+  constructor(private authService: AuthService) {}
+  isLogged: boolean = false;
+
 
   ngOnInit() {
+    this.isLogged = this.authService.isLoggedIn;
+  }
+
+  logout(): void {
+    this.authService.logout();
   }
 }
