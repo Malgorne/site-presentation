@@ -18,7 +18,7 @@ export class NavbarComponent implements OnInit {
     link: '/projects',
     title: 'Mes projets'
   }, {
-    link: '/',
+    link: '/network-main',
     title: 'Réseau social'
   }];
   constructor() { }
