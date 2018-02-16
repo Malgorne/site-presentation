@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { NetworkLoginComponent } from './network-login.component';
+import { AuthSectionComponent } from './auth-section.component';
 
-describe('NetworkLoginComponent', () => {
-  let component: NetworkLoginComponent;
-  let fixture: ComponentFixture<NetworkLoginComponent>;
+describe('AuthSectionComponent', () => {
+  let component: AuthSectionComponent;
+  let fixture: ComponentFixture<AuthSectionComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ NetworkLoginComponent ]
+      declarations: [ AuthSectionComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(NetworkLoginComponent);
+    fixture = TestBed.createComponent(AuthSectionComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

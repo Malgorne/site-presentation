@@ -17,17 +17,19 @@ import { FooterComponent } from './components/footer/footer.component';
 import { ResumeComponent } from './components/resume/resume.component';
 import { ProjectsComponent } from './components/projects/projects.component';
 import { NetworkMainComponent } from './components/network-main/network-main.component';
-import { NetworkRegisterComponent } from './components/network-register/network-register.component';
-import { NetworkLoginComponent } from './components/network-login/network-login.component';
+import { RegisterComponent } from './components/register/register.component';
+import { LoginComponent } from './components/login/login.component';
 import { ListGeneratorComponent } from './components/list-generator/list-generator.component';
 import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
 import { HomeComponent } from './components/home/home.component';
+import { AuthSectionComponent } from './components/auth-section/auth-section.component';
 
 // Directives
 import { BolterDirective } from './directives/bolter.directive';
 
 // Services
 import { AuthService } from './services/auth.service';
+import { AuthGuardService } from './services/auth-guard.service';
 
 @NgModule({
   declarations: [
@@ -40,10 +42,11 @@ import { AuthService } from './services/auth.service';
     ListGeneratorComponent,
     HeaderComponent,
     NetworkMainComponent,
-    NetworkRegisterComponent,
-    NetworkLoginComponent,
+    RegisterComponent,
+    LoginComponent,
     PageNotFoundComponent,
-    HomeComponent
+    HomeComponent,
+    AuthSectionComponent
   ],
   imports: [
     BrowserModule,
@@ -54,7 +57,8 @@ import { AuthService } from './services/auth.service';
     )
   ],
   providers: [
-    AuthService
+    AuthService,
+    AuthGuardService
   ],
   bootstrap: [AppComponent]
 })

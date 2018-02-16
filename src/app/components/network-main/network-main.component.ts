@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { AuthService } from '../../services/auth.service';
 
 @Component({
   selector: 'app-network-main',
@@ -8,15 +7,7 @@ import { AuthService } from '../../services/auth.service';
 })
 
 export class NetworkMainComponent implements OnInit {
-  constructor(private authService: AuthService) {}
-  isLogged: boolean = false;
-
-
+  constructor() {}
   ngOnInit() {
-    this.isLogged = this.authService.isLoggedIn;
-  }
-
-  logout(): void {
-    this.authService.logout();
   }
 }
