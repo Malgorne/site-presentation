@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+
+import { AuthService } from '../../services/auth.service';
 
 @Component({
   selector: 'app-network-main',
@@ -6,8 +9,10 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./network-main.component.sass']
 })
 
-export class NetworkMainComponent implements OnInit {
-  constructor() {}
-  ngOnInit() {
+export class NetworkMainComponent {
+  constructor(public authService: AuthService, public router: Router) {}
+  logout() {
+    this.authService.logout();
+    this.router.navigate(['/auth-section']);
   }
 }
