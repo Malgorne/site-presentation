@@ -20,6 +20,8 @@ import { NetworkMainComponent } from './components/network-main/network-main.com
 import { NetworkRegisterComponent } from './components/network-register/network-register.component';
 import { NetworkLoginComponent } from './components/network-login/network-login.component';
 import { ListGeneratorComponent } from './components/list-generator/list-generator.component';
+import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
+import { HomeComponent } from './components/home/home.component';
 
 // Directives
 import { BolterDirective } from './directives/bolter.directive';
@@ -39,7 +41,9 @@ import { AuthService } from './services/auth.service';
     HeaderComponent,
     NetworkMainComponent,
     NetworkRegisterComponent,
-    NetworkLoginComponent
+    NetworkLoginComponent,
+    PageNotFoundComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
