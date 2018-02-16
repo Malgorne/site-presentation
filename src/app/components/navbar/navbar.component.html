@@ -5,13 +5,13 @@
   </button>
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
-      <li class="nav-item col-auto" *ngFor="let item of linksMenu; let i = index" appBolter>
+      <li class="nav-item col-auto" *ngFor="let item of linksMenu; let i = index">
         <a class="navbar-brand" title="{{item.title}}" *ngIf="item.type === 'img'"
-          routerLink="/{{item.link}}">
+          routerLink="/{{item.link}}" routerLinkActive="active">
             <img src="{{item.src}}" alt="{{item.alt}}" title={{item.alt}}>
         </a>
         <a class="navbar-brand" title="item.title" *ngIf="!item.type"
-          routerLink="/{{item.link}}">{{item.title}}</a>
+          routerLink="/{{item.link}}" routerLinkActive="active">{{item.title}}</a>
       </li>
     </ul>
   </div>
