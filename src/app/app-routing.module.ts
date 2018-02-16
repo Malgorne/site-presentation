@@ -6,6 +6,7 @@ import { ResumeComponent } from './components/resume/resume.component';
 import { NetworkMainComponent } from './components/network-main/network-main.component';
 import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
 import { HomeComponent } from './components/home/home.component';
+import { AuthSectionComponent } from './components/auth-section/auth-section.component';
 
 import { AuthGuardService } from './services/auth-guard.service';
 
@@ -19,6 +20,7 @@ const routes: Routes = [
     component: NetworkMainComponent,
     canActivate: [AuthGuardService]
   },
+  { path: 'auth-section', component: AuthSectionComponent },
   { path: '**', component: PageNotFoundComponent }
 ];
 
