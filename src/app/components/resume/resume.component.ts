@@ -11,6 +11,66 @@ export class ResumeComponent implements OnInit {
   count: number = 0;
   blockedItem: string = '';
   selectedItem: string = 'abbealBlock';
+
+  studies: object = {
+    title: {
+      content: 'Formation',
+      tag: 'h2'
+    },
+    list: [{
+      content: '2016: IFOCOP, Développeur-Intégrateur Web FullStack JavaScript',
+      events: {
+        click: () => this.selectBlocked('ifocopBlock'),
+        mouseenter: () => this.show('ifocopBlock')
+      },
+      classes: ['bold']
+    }, {
+      content: '2015: Openclassrooms, Certificats Html et Css, Git/GitHub, Php-MySql, Symfony2',
+      events: {
+        click: () => this.selectBlocked('openclassroomsBlock'),
+        mouseenter: () => this.show('openclassroomsBlock')
+      },
+      classes: ['bold']
+    }, {
+      content: '2006: Lycée St Denis, BTS Banque, option marché des particulier'
+    }, {
+      content: '2003: Lycée Madeleine Michelis, Baccalauréat Littéraire, spécialisation Allemand'
+    }]
+  };
+
+  professionalCourse: object = {
+    title: {
+      content: 'Parcours professionnel',
+      tag: 'h2'
+    },
+    list: [{
+      content: 'Juin 2017 à ce jour: Développeur FullStack - Abbeal, Paris',
+      events: {
+        click: () => this.selectBlocked('abbealBlock'),
+        mouseenter: () => this.show('abbealBlock')
+      },
+      classes: ['bold']
+    }, {
+      content: 'Janvier 2017 à Juin 2017: Développeur FullStack – Umanlife, Paris',
+      events: {
+        click: () => this.selectBlocked('umanlifeBlock'),
+        mouseenter: () => this.show('umanlifeBlock')
+      },
+      classes: ['bold']
+    }, {
+      content: '2016 à décembre 2017: Développeur FullStack – NilObstat, Amiens',
+      events: {
+        click: () => this.selectBlocked('nilobstatBlock'),
+        mouseenter: () => this.show('nilobstatBlock')
+      },
+      classes: ['bold']
+    }, {
+      content: '2009 à 2016: Conseiller clientèle - BNP Paribas, Saint Germain en Laye'
+    }, {
+      content: '2007 à 2008: Accueil - Crédit Mutuel, Paris Montparnasse'
+    }]
+  };
+
   listImgSkills: object[] = [
     { src: `${this.imgFolder}/babel.png`, alt: 'babel' },
     { src: `${this.imgFolder}/angular.png`, alt: 'angular' },
@@ -30,14 +90,14 @@ export class ResumeComponent implements OnInit {
     { src: `${this.imgFolder}/bitbucket.png`, alt: 'bitbucket' }
   ];
 
-  selectItem(item: string) {
-    this.selectedItem = item;
+  show(item: string) {
+    if(!this.blockedItem.length) this.selectedItem = item;
   }
-
+  
   selectBlocked(item: string) {
     if(this.selectedItem === item && this.blockedItem.length) this.count++;
     if(this.count === 1) return this.reset();
-    this.selectItem(item);
+    this.selectedItem = item;
     this.blockedItem = item;
   };
 
@@ -46,9 +106,6 @@ export class ResumeComponent implements OnInit {
     this.blockedItem = '';
   }
 
-  show(item: string) {
-    if(!this.blockedItem.length) this.selectItem(item);
-  }
   ngOnInit() {
   }
 }
