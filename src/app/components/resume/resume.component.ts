@@ -23,14 +23,14 @@ export class ResumeComponent implements OnInit {
         click: () => this.selectBlocked('ifocopBlock'),
         mouseenter: () => this.show('ifocopBlock')
       },
-      ngClass: ['bold']
+      classes: ['bold']
     }, {
       content: '2015: Openclassrooms, Certificats Html et Css, Git/GitHub, Php-MySql, Symfony2',
       events: {
         click: () => this.selectBlocked('openclassroomsBlock'),
         mouseenter: () => this.show('openclassroomsBlock')
       },
-      ngClass: ['bold']
+      classes: ['bold']
     }, {
       content: '2006: Lycée St Denis, BTS Banque, option marché des particulier'
     }, {
@@ -49,21 +49,21 @@ export class ResumeComponent implements OnInit {
         click: () => this.selectBlocked('abbealBlock'),
         mouseenter: () => this.show('abbealBlock')
       },
-      ngClass: ['bold']
+      classes: ['bold']
     }, {
       content: 'Janvier 2017 à Juin 2017: Développeur FullStack – Umanlife, Paris',
       events: {
         click: () => this.selectBlocked('umanlifeBlock'),
         mouseenter: () => this.show('umanlifeBlock')
       },
-      ngClass: ['bold']
+      classes: ['bold']
     }, {
       content: '2016 à décembre 2017: Développeur FullStack – NilObstat, Amiens',
       events: {
         click: () => this.selectBlocked('nilobstatBlock'),
         mouseenter: () => this.show('nilobstatBlock')
       },
-      ngClass: ['bold']
+      classes: ['bold']
     }, {
       content: '2009 à 2016: Conseiller clientèle - BNP Paribas, Saint Germain en Laye'
     }, {
@@ -90,14 +90,14 @@ export class ResumeComponent implements OnInit {
     { src: `${this.imgFolder}/bitbucket.png`, alt: 'bitbucket' }
   ];
 
-  selectItem(item: string) {
-    this.selectedItem = item;
+  show(item: string) {
+    if(!this.blockedItem.length) this.selectedItem = item;
   }
-
+  
   selectBlocked(item: string) {
     if(this.selectedItem === item && this.blockedItem.length) this.count++;
     if(this.count === 1) return this.reset();
-    this.selectItem(item);
+    this.selectedItem = item;
     this.blockedItem = item;
   };
 
@@ -106,9 +106,6 @@ export class ResumeComponent implements OnInit {
     this.blockedItem = '';
   }
 
-  show(item: string) {
-    if(!this.blockedItem.length) this.selectItem(item);
-  }
   ngOnInit() {
   }
 }
