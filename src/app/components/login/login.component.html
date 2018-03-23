@@ -1,13 +1,11 @@
 <h2 class="text-center">
   Se connecter
 </h2>
-<p>
-  adresse mail:
-</p>
-<p>
-  mot de passe:
-</p>
-<p>
-  mot de passe oublié? {{ isLogged }}
-</p>
-<button type="button" (click)="login()">LOGIN</button>
+<form (ngSubmit)="login(loginForm)" #loginForm="ngForm">
+  <input type="text" class="form-control" id="mail" placeholder="Votre email" [(ngModel)]="loginForm.mail" name="mail" required>
+  <input type="password" class="form-control" id="mdp" placeholder="Votre mot de passe" [(ngModel)]="loginForm.mdp" name="mdp" required>
+  <small>mot de passe oublié?</small>
+
+  <br/>
+  <button type="submit" class="btn btn-primary" [disabled]="!loginForm.form.valid">LOGIN</button>
+</form>

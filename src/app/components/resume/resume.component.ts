@@ -23,7 +23,7 @@ export class ResumeComponent implements OnInit {
         click: () => this.selectBlocked('ifocopBlock'),
         mouseenter: () => this.show('ifocopBlock')
       },
-      classes: ['bold']
+      classes: ['bold'],
     }, {
       content: '2015: Openclassrooms, Certificats Html et Css, Git/GitHub, Php-MySql, Symfony2',
       events: {
@@ -93,7 +93,7 @@ export class ResumeComponent implements OnInit {
   show(item: string) {
     if(!this.blockedItem.length) this.selectedItem = item;
   }
-  
+
   selectBlocked(item: string) {
     if(this.selectedItem === item && this.blockedItem.length) this.count++;
     if(this.count === 1) return this.reset();

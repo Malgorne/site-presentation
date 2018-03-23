@@ -1,4 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
+import { FormsModule }   from '@angular/forms';
 import { NgModule } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
 
@@ -54,7 +55,8 @@ import { AuthGuardService } from './services/auth-guard.service';
     HttpClientModule,
     HttpClientInMemoryWebApiModule.forRoot(
       InMemoryDataService, { dataEncapsulation: false }
-    )
+    ),
+    FormsModule
   ],
   providers: [
     AuthService,
