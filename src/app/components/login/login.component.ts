@@ -17,8 +17,9 @@ export class LoginComponent {
     this.authService.login().subscribe(() => {
       if(this.authService.isLoggedIn) {
         let redirect = this.authService.redirectUrl ? this.authService.redirectUrl : '/network-main';
-        this.router.navigate([redirect]);
+        return this.router.navigate([redirect]);
       }
+      this.onError = true;
     });
   }
 }

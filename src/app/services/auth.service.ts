@@ -14,6 +14,10 @@ export class AuthService {
     console.log('dans le click du service');
     return Observable.of(true).delay(1000).do(val => this.isLoggedIn = true);
   }
+  register(): Observable<boolean> {
+    console.log('dans le click du service');
+    return Observable.of(true).delay(1000).do(val => this.isLoggedIn = false);
+  }
 
   logout(): void {
     this.isLoggedIn = false;

@@ -27,7 +27,7 @@ export class ListGeneratorComponent implements OnInit {
       this.renderer.appendChild(ulNode, liNode);
       if(el.events) forEach(el.events, (action, event) => this.renderer.listen(liNode, event, action));
       if(el.classes) forEach(el.classes, aClass => this.renderer.addClass(liNode, aClass));
-      if(el.ngClasses) console.log('untruc')
+      if(el.ngClasses) console.log('untruc');
     });
     return this.renderer.appendChild(this.el.nativeElement, ulNode);
   }
