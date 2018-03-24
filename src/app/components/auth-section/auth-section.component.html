@@ -1,13 +1,13 @@
 <div id="auth-section">
   <div class="row justify-content-around">
     <div class="col-4 credentials">
-      <app-login></app-login>
+      <app-auth-form [config]="confLoginForm"></app-auth-form>
     </div>
     <div class="col-1 align-self-center">
       <p class ="text-center font-weight-bold text-uppercase">ou</p>
     </div>
     <div class="col-4 credentials">
-      <app-register></app-register>
+      <app-auth-form [config]="confRegisterForm"></app-auth-form>
     </div>
   </div>
 </div>

@@ -24,6 +24,7 @@ import { ListGeneratorComponent } from './components/list-generator/list-generat
 import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
 import { HomeComponent } from './components/home/home.component';
 import { AuthSectionComponent } from './components/auth-section/auth-section.component';
+import { AuthFormComponent } from './components/auth-form/auth-form.component';
 
 // Directives
 import { BolterDirective } from './directives/bolter.directive';
@@ -47,7 +48,8 @@ import { AuthGuardService } from './services/auth-guard.service';
     LoginComponent,
     PageNotFoundComponent,
     HomeComponent,
-    AuthSectionComponent
+    AuthSectionComponent,
+    AuthFormComponent
   ],
   imports: [
     BrowserModule,
