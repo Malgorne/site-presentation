@@ -9,7 +9,6 @@ import { AuthService } from '../../services/auth.service';
   styleUrls: ['./auth-form.component.sass']
 })
 export class AuthFormComponent implements OnInit {
-
   constructor(public authService: AuthService, public router: Router) { }
   @Input() config: object = {};
   ngOnInit() {
