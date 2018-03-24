@@ -18,13 +18,11 @@ import { FooterComponent } from './components/footer/footer.component';
 import { ResumeComponent } from './components/resume/resume.component';
 import { ProjectsComponent } from './components/projects/projects.component';
 import { NetworkMainComponent } from './components/network-main/network-main.component';
-import { RegisterComponent } from './components/register/register.component';
-import { LoginComponent } from './components/login/login.component';
+import { AuthSectionComponent } from './components/auth-section/auth-section.component';
+import { AuthFormComponent } from './components/auth-form/auth-form.component';
 import { ListGeneratorComponent } from './components/list-generator/list-generator.component';
 import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
 import { HomeComponent } from './components/home/home.component';
-import { AuthSectionComponent } from './components/auth-section/auth-section.component';
-import { AuthFormComponent } from './components/auth-form/auth-form.component';
 
 // Directives
 import { BolterDirective } from './directives/bolter.directive';
@@ -44,8 +42,6 @@ import { AuthGuardService } from './services/auth-guard.service';
     ListGeneratorComponent,
     HeaderComponent,
     NetworkMainComponent,
-    RegisterComponent,
-    LoginComponent,
     PageNotFoundComponent,
     HomeComponent,
     AuthSectionComponent,
