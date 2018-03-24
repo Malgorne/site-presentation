@@ -1,0 +1,19 @@
+<h2 class="text-center">
+  {{config.title}}
+</h2>
+<form (ngSubmit)="config.onSubmit(loginForm)" #loginForm="ngForm">
+  <div class="alerte text-center" [hidden]="!config.onError">
+    <p>{{config.message}}</p>
+  </div>
+  <input *ngFor="let inputConf of config.inputs" type="{{inputConf.type}}"
+    class="form-control {{inputConf.name}}" placeholder="{{inputConf.placeholder}}"
+    [(ngModel)]="loginForm[inputConf.name]" name="{{inputConf.name}}" [required]="inputConf.required">
+  <div *ngIf="config.small">
+    <small><a title="config.small.title"
+      routerLink="{{config.small.link}}">{{config.small.content}}?</a></small>
+    <br/>
+  </div>
+  <button type="submit" class="btn"
+    [ngClass]="{'invalid': config.button.confirm ? !loginForm.form.valid ||  loginForm.confirm !== loginForm.mdp : !loginForm.form.valid}"
+    [disabled]="config.button.confirm ? !loginForm.form.valid || loginForm.confirm !== loginForm.mdp : !loginForm.form.valid">{{config.button.content.toUpperCase()}}</button>
+</form>
