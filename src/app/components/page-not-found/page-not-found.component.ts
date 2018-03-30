@@ -6,10 +6,23 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./page-not-found.component.sass']
 })
 export class PageNotFoundComponent implements OnInit {
-
   constructor() { }
 
-  ngOnInit() {
+  tardis: object = {
+    top: Math.random() * (75 - 25) + 25,
+    left: Math.random() * (90 - 10) + 10
   }
+
+  animateY() {
+    console.log('Horizontal');
+  }
+
+  animateX() {
+    console.log('Vertical');
+  }
+
+  ngOnInit() {
+
+  };
 
 }
