@@ -8,21 +8,6 @@ import { Component, OnInit } from '@angular/core';
 export class PageNotFoundComponent implements OnInit {
   constructor() { }
 
-  tardis = {
-    top: Math.random() * (75 - 25) + 25,
-    left: Math.random() * (90 - 10) + 10
-  }
-
-  animateY() {
-    console.log('Vertical');
-    return this.tardis.top;
-  }
-
-  animateX() {
-    console.log('Horizontal');
-    return this.tardis.left;
-  }
-
   ngOnInit() {
 
   };
