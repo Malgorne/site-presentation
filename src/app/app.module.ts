@@ -30,6 +30,7 @@ import { BolterDirective } from './directives/bolter.directive';
 // Services
 import { AuthService } from './services/auth.service';
 import { AuthGuardService } from './services/auth-guard.service';
+import { MoveBoxDirective } from './directives/move-box.directive';
 
 @NgModule({
   declarations: [
@@ -45,7 +46,8 @@ import { AuthGuardService } from './services/auth-guard.service';
     PageNotFoundComponent,
     HomeComponent,
     AuthSectionComponent,
-    AuthFormComponent
+    AuthFormComponent,
+    MoveBoxDirective
   ],
   imports: [
     BrowserModule,
