@@ -4,32 +4,27 @@ import { random } from 'lodash';
 @Directive({
   selector: '[appMoveBox]'
 })
+
 export class MoveBoxDirective {
   constructor(el: ElementRef) {
     this.el = el;
   }
-  // contains the native
   el;
   maxWidth: number;
   maxHeight: number;
-  speed: number;
-  rotation: number;
-  scaleValue: number;
-  leftToRightOnUp: boolean;
   ngOnInit() {
     this.maxWidth = this.el.nativeElement.parentElement.clientWidth;
     this.maxHeight = this.el.nativeElement.parentElement.clientHeight;
-    this.leftToRightOnUp = (Math.round(Math.random() * (1 - 0) + 0)) === 0 ? false : true;
     this.move();
   };
 
   /**
    * move - Select a random animation.
    *
-   * @return {type}  Select a random animation.
+   * @return {Function}  Select a random animation.
    */
   move() {
-    const ANIMATIONS: {} = [
+    const ANIMATIONS: string[] = [
       'leftToRight',
       'fromCenter'
     ];
@@ -37,11 +32,10 @@ export class MoveBoxDirective {
     setTimeout(() => this[ANIMATIONS[index]](), 2000);
   };
 
-
   /**
    * leftToRight - Move box left to right
    *
-   * @return {type}  Moves the box.
+   * @return {Void}  Moves the box.
    */
   leftToRight() {
     let elStyle = this.el.nativeElement.style;
@@ -51,19 +45,20 @@ export class MoveBoxDirective {
     const minTop = 300;
     const maxTop = 50;
     let myReq;
+    let leftToRightOnUp = (Math.round(Math.random() * (1 - 0) + 0)) === 0 ? false : true;
     const animation =  () => {
       const top = parseInt(elStyle.top, 10);
       const left = parseInt(elStyle.left, 10);
       // Move left to right
       if (this.maxWidth > left) elStyle.left = `${parseInt(elStyle.left, 10) + speed}px`;
       // Move bottom to up
-      if (top > maxTop && this.leftToRightOnUp) elStyle.top = `${parseInt(elStyle.top, 10) - speed}px`;
+      if (top > maxTop && leftToRightOnUp) elStyle.top = `${parseInt(elStyle.top, 10) - speed}px`;
       // Select up to bottom
-      else if (top <= maxTop && this.leftToRightOnUp) this.leftToRightOnUp = false;
+      else if (top <= maxTop && leftToRightOnUp) leftToRightOnUp = false;
       // Move up to bottom
-      if (top < minTop && !this.leftToRightOnUp) elStyle.top = `${parseInt(elStyle.top, 10) + speed}px`;
+      if (top < minTop && !leftToRightOnUp) elStyle.top = `${parseInt(elStyle.top, 10) + speed}px`;
       // Select bottom to top
-      else if (top >= minTop && !this.leftToRightOnUp) this.leftToRightOnUp = true;
+      else if (top >= minTop && !leftToRightOnUp) leftToRightOnUp = true;
       // Stop this animation
       if (this.maxWidth <= left) {
         elStyle.left = '-100px';
@@ -78,7 +73,7 @@ export class MoveBoxDirective {
   /**
    * fromCenter - Move the box from the center.
    *
-   * @return {type}  Move the box from the center to the user with circular movements.
+   * @return {Void}  Move the box from the center to the user with circular movements.
    */
   fromCenter() {
     let elStyle = this.el.nativeElement.style;
@@ -105,20 +100,4 @@ export class MoveBoxDirective {
     };
     myReq = requestAnimationFrame(animation);
   }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 }
