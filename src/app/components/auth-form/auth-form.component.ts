@@ -11,7 +11,5 @@ import { AuthService } from '../../services/auth.service';
 export class AuthFormComponent implements OnInit {
   constructor(public authService: AuthService, public router: Router) { }
   @Input() config: object = {};
-  ngOnInit() {
-    console.log(this.config);
-  }
+  ngOnInit() {}
 }

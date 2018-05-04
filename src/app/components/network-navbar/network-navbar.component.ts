@@ -6,10 +6,25 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./network-navbar.component.sass']
 })
 export class NetworkNavbarComponent implements OnInit {
+  linksMenu:object[] = [{
+    link: '#',
+    title: 'Chat'
+  }, {
+    link: '#',
+    title: 'Mes posts'
+  }, {
+    link: '#',
+    title: 'Mes mails'
+  }, {
+    link: '#',
+    title: 'Mon compte'
+  }, {
+    link: '#',
+    title: 'Déconnexion'
+  }]
 
   constructor() { }
 
-  ngOnInit() {
-  }
+  ngOnInit() {}
 
 }
