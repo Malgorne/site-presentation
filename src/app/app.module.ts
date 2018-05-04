@@ -18,6 +18,7 @@ import { FooterComponent } from './components/footer/footer.component';
 import { ResumeComponent } from './components/resume/resume.component';
 import { ProjectsComponent } from './components/projects/projects.component';
 import { NetworkMainComponent } from './components/network-main/network-main.component';
+import { NetworkNavbarComponent } from './components/network-navbar/network-navbar.component';
 import { AuthSectionComponent } from './components/auth-section/auth-section.component';
 import { AuthFormComponent } from './components/auth-form/auth-form.component';
 import { ListGeneratorComponent } from './components/list-generator/list-generator.component';
@@ -47,7 +48,8 @@ import { MoveBoxDirective } from './directives/move-box.directive';
     HomeComponent,
     AuthSectionComponent,
     AuthFormComponent,
-    MoveBoxDirective
+    MoveBoxDirective,
+    NetworkNavbarComponent
   ],
   imports: [
     BrowserModule,
