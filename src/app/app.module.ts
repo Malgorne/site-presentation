@@ -32,11 +32,12 @@ import { GeneratorNavbarComponent } from './components/generators/generator-navb
 
 // Directives
 import { BolterDirective } from './directives/bolter.directive';
+import { MoveBoxDirective } from './directives/move-box.directive';
 
 // Services
-import { AuthService } from './services/auth.service';
-import { AuthGuardService } from './services/auth-guard.service';
-import { MoveBoxDirective } from './directives/move-box.directive';
+import { AuthService } from './services/auth/auth.service';
+import { AuthGuardService } from './services/auth-guard/auth-guard.service';
+import { GithubService } from './services/github/github.service';
 
 @NgModule({
   declarations: [
@@ -66,7 +67,8 @@ import { MoveBoxDirective } from './directives/move-box.directive';
   ],
   providers: [
     AuthService,
-    AuthGuardService
+    AuthGuardService,
+    GithubService
   ],
   bootstrap: [AppComponent]
 })

@@ -8,7 +8,7 @@ import { PageNotFoundComponent } from './components/page-not-found/page-not-foun
 import { HomeComponent } from './components/home/home.component';
 import { AuthSectionComponent } from './components/auth/auth-section/auth-section.component';
 
-import { AuthGuardService } from './services/auth-guard.service';
+import { AuthGuardService } from './services/auth-guard/auth-guard.service';
 
 const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },

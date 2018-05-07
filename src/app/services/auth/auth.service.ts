@@ -11,11 +11,11 @@ export class AuthService {
   redirectUrl: string;
 
   login(): Observable<boolean> {
-    console.log('dans le click du service');
+    console.log('dans le login du service');
     return Observable.of(true).delay(1000).do(val => this.isLoggedIn = true);
   }
   register(): Observable<boolean> {
-    console.log('dans le click du service');
+    console.log('dans le register du service');
     return Observable.of(true).delay(1000).do(val => this.isLoggedIn = false);
   }
 
