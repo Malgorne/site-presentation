@@ -11,6 +11,25 @@ import { AuthService } from '../../services/auth.service';
 
 export class NetworkMainComponent {
   constructor(public authService: AuthService, public router: Router) {}
+  navbar: object = {
+    id: 'networkNavbarSupportedContent',
+    links: [{
+      link: '#',
+      title: 'Chat'
+    }, {
+      link: '#',
+      title: 'Mes posts'
+    }, {
+      link: '#',
+      title: 'Mes mails'
+    }, {
+      link: '#',
+      title: 'Mon compte'
+    }, {
+      link: '#',
+      title: 'Déconnexion'
+    }]
+  };
   logout() {
     this.authService.logout();
     this.router.navigate(['/auth-section']);

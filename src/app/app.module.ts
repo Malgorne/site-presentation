@@ -13,16 +13,18 @@ import { AppRoutingModule } from './app-routing.module';
 
 // App components
 import { HeaderComponent } from './components/header/header.component';
-import { NavbarComponent } from './components/navbar/navbar.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { ResumeComponent } from './components/resume/resume.component';
 import { ProjectsComponent } from './components/projects/projects.component';
 import { NetworkMainComponent } from './components/network-main/network-main.component';
 import { AuthSectionComponent } from './components/auth-section/auth-section.component';
 import { AuthFormComponent } from './components/auth-form/auth-form.component';
-import { ListGeneratorComponent } from './components/list-generator/list-generator.component';
 import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
 import { HomeComponent } from './components/home/home.component';
+import { GeneratorNavbarComponent } from './components/generator-navbar/generator-navbar.component';
+
+// Components generators
+import { ListGeneratorComponent } from './components/list-generator/list-generator.component';
 
 // Directives
 import { BolterDirective } from './directives/bolter.directive';
@@ -36,7 +38,6 @@ import { MoveBoxDirective } from './directives/move-box.directive';
   declarations: [
     AppComponent,
     FooterComponent,
-    NavbarComponent,
     ResumeComponent,
     ProjectsComponent,
     BolterDirective,
@@ -47,7 +48,8 @@ import { MoveBoxDirective } from './directives/move-box.directive';
     HomeComponent,
     AuthSectionComponent,
     AuthFormComponent,
-    MoveBoxDirective
+    MoveBoxDirective,
+    GeneratorNavbarComponent
   ],
   imports: [
     BrowserModule,
