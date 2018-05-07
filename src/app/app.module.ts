@@ -13,12 +13,10 @@ import { AppRoutingModule } from './app-routing.module';
 
 // App components
 import { HeaderComponent } from './components/header/header.component';
-import { NavbarComponent } from './components/navbar/navbar.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { ResumeComponent } from './components/resume/resume.component';
 import { ProjectsComponent } from './components/projects/projects.component';
 import { NetworkMainComponent } from './components/network-main/network-main.component';
-import { NetworkNavbarComponent } from './components/network-navbar/network-navbar.component';
 import { AuthSectionComponent } from './components/auth-section/auth-section.component';
 import { AuthFormComponent } from './components/auth-form/auth-form.component';
 import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
@@ -40,7 +38,6 @@ import { MoveBoxDirective } from './directives/move-box.directive';
   declarations: [
     AppComponent,
     FooterComponent,
-    NavbarComponent,
     ResumeComponent,
     ProjectsComponent,
     BolterDirective,
@@ -52,7 +49,6 @@ import { MoveBoxDirective } from './directives/move-box.directive';
     AuthSectionComponent,
     AuthFormComponent,
     MoveBoxDirective,
-    NetworkNavbarComponent,
     GeneratorNavbarComponent
   ],
   imports: [

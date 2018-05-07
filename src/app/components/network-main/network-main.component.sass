@@ -2,3 +2,21 @@
 
 #network
   margin-top: $margin50 + px
+  #network-navbar
+    $iSize: 30px
+
+    /deep/ .navbar
+      margin-top: -50px
+      margin-bottom: 50px
+      width: 100%
+      background-color: $green
+
+    /deep/ img
+      width: $iSize
+      height: $iSize
+
+    /deep/ ul
+      margin: auto
+
+    /deep/ .active
+      font-weight: bold

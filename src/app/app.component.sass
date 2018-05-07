@@ -1,5 +1,22 @@
 @import "../assets/sass/variables.sass"
 
+// !important /deep/ are needed to override children's css
+#main-navbar
+  $iSize: 30px
+
+  /deep/ .navbar
+    width: 100%
+    background-color: $blue
+
+  /deep/ img
+    width: $iSize
+    height: $iSize
+
+  /deep/ ul
+    margin: auto
+
+  /deep/ .active
+    font-weight: bold
 #footer
   background-color: $blue
   margin-top: $margin50 + px
