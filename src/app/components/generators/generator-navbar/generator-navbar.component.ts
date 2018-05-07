@@ -8,8 +8,6 @@ export class GeneratorNavbarComponent implements OnInit {
   constructor() { }
   @Input() navbar: object = {};
 
-  ngOnInit() {
-    console.log('this.navbar', this.navbar);
-  }
+  ngOnInit() {}
 
 }
