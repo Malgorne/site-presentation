@@ -11,20 +11,24 @@ import { InMemoryDataService }  from './services/in-memory-data.service';
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 
-// App components
+// Main's section
 import { HeaderComponent } from './components/header/header.component';
-import { FooterComponent } from './components/footer/footer.component';
+import { HomeComponent } from './components/home/home.component';
 import { ResumeComponent } from './components/resume/resume.component';
 import { ProjectsComponent } from './components/projects/projects.component';
-import { NetworkMainComponent } from './components/network-main/network-main.component';
-import { AuthSectionComponent } from './components/auth-section/auth-section.component';
-import { AuthFormComponent } from './components/auth-form/auth-form.component';
 import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
-import { HomeComponent } from './components/home/home.component';
-import { GeneratorNavbarComponent } from './components/generator-navbar/generator-navbar.component';
+import { FooterComponent } from './components/footer/footer.component';
+
+// Authentification's section
+import { AuthSectionComponent } from './components/auth/auth-section/auth-section.component';
+import { AuthFormComponent } from './components/auth/auth-form/auth-form.component';
+
+// Network's section
+import { NetworkMainComponent } from './components/network/network-main/network-main.component';
 
 // Components generators
-import { ListGeneratorComponent } from './components/list-generator/list-generator.component';
+import { GeneratorListComponent } from './components/generators/generator-list/generator-list.component';
+import { GeneratorNavbarComponent } from './components/generators/generator-navbar/generator-navbar.component';
 
 // Directives
 import { BolterDirective } from './directives/bolter.directive';
@@ -41,7 +45,7 @@ import { MoveBoxDirective } from './directives/move-box.directive';
     ResumeComponent,
     ProjectsComponent,
     BolterDirective,
-    ListGeneratorComponent,
+    GeneratorListComponent,
     HeaderComponent,
     NetworkMainComponent,
     PageNotFoundComponent,
