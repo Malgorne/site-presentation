@@ -25,6 +25,7 @@ export class NetworkNavbarComponent implements OnInit {
 
   constructor() { }
 
-  ngOnInit() {}
-
+  ngOnInit() {
+    console.log('you')
+  }
 }

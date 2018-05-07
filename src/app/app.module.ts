@@ -21,9 +21,12 @@ import { NetworkMainComponent } from './components/network-main/network-main.com
 import { NetworkNavbarComponent } from './components/network-navbar/network-navbar.component';
 import { AuthSectionComponent } from './components/auth-section/auth-section.component';
 import { AuthFormComponent } from './components/auth-form/auth-form.component';
-import { ListGeneratorComponent } from './components/list-generator/list-generator.component';
 import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
 import { HomeComponent } from './components/home/home.component';
+import { GeneratorNavbarComponent } from './components/generator-navbar/generator-navbar.component';
+
+// Components generators
+import { ListGeneratorComponent } from './components/list-generator/list-generator.component';
 
 // Directives
 import { BolterDirective } from './directives/bolter.directive';
@@ -49,7 +52,8 @@ import { MoveBoxDirective } from './directives/move-box.directive';
     AuthSectionComponent,
     AuthFormComponent,
     MoveBoxDirective,
-    NetworkNavbarComponent
+    NetworkNavbarComponent,
+    GeneratorNavbarComponent
   ],
   imports: [
     BrowserModule,
