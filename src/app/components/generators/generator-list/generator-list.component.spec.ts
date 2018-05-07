@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { ListGeneratorComponent } from './list-generator.component';
+import { GeneratorListComponent } from './generator-list.component';
 
 describe('ListGeneratorComponent', () => {
-  let component: ListGeneratorComponent;
-  let fixture: ComponentFixture<ListGeneratorComponent>;
+  let component: GeneratorListComponent;
+  let fixture: ComponentFixture<GeneratorListComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ ListGeneratorComponent ]
+      declarations: [ GeneratorListComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(ListGeneratorComponent);
+    fixture = TestBed.createComponent(GeneratorListComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

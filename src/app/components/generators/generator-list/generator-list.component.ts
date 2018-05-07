@@ -2,11 +2,10 @@ import { Component, OnInit, Input, ElementRef, Renderer2 } from '@angular/core';
 import { forEach } from 'lodash';
 
 @Component({
-  selector: 'app-list-generator',
-  templateUrl: './list-generator.component.html',
-  styleUrls: ['./list-generator.component.sass', '../resume/resume.component.sass']
+  selector: 'app-generator-list',
+  template: ''
 })
-export class ListGeneratorComponent implements OnInit {
+export class GeneratorListComponent implements OnInit {
   constructor(private renderer: Renderer2, private el: ElementRef) { }
   @Input() list: object = {};
   ngOnInit() {
